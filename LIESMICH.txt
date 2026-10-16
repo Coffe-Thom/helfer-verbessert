@@ -1,0 +1,19 @@
+Was sich aendert
+- Q legt einen Auftrag erst ab, wenn du Ja sagst. Oder du drueckst An den Coder.
+- Die Gespraechsseite zeigt die Ampel und holt alte Saetze nach dem Neuladen.
+- Das Dashboard zeigt das letzte Ergebnis. Der Schalter startet und stoppt den Coder wirklich.
+- Eine haengen gebliebene Datei in in_arbeit geht beim naechsten Start zurueck in den Auftragskorb.
+- Q darf die laufenden Chat-Dateien weiter nicht ueberschreiben.
+
+Einsetzen auf dem Steam Deck:
+cd /home/deck/Documents/AI
+curl -L -o /tmp/helfer.zip https://github.com/Coffe-Thom/helfer-verbessert/archive/refs/heads/main.zip
+unzip -o /tmp/helfer.zip -d /tmp
+cp -a /tmp/helfer-verbessert-main/. /home/deck/Documents/AI/
+
+Danach beide Server neu starten.
+Chat: cd Q_Helfer/chat && python3 server.py
+Dashboard: cd Q_Helfer/dashboard && python3 server.py
+
+Alte Gespraeche bleiben in gedaechtnis.json.
+Modelle, Old und Daten bleiben unangetastet.
